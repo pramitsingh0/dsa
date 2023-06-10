@@ -1,13 +1,20 @@
 import unittest
 
 
+# def rotate_array(arr):
+#     if len(arr) < 1:
+#         return arr
+#     temp = arr[0]
+#     for i in range(len(arr) - 1):
+#         arr[i] = arr[i + 1]
+#     arr[len(arr) - 1] = temp
+#     return arr
+
+
 def rotate_array(arr):
     if len(arr) < 1:
         return arr
-    temp = arr[0]
-    for i in range(len(arr) - 1):
-        arr[i] = arr[i + 1]
-    arr[len(arr) - 1] = temp
+    arr[:] = arr[1:] + arr[:1]
     return arr
 
 
