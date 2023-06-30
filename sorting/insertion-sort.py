@@ -11,6 +11,20 @@ def insertion_sort(arr):
         arr[j + 1] = key
 
 
+def insertionSort(nums):
+    n = len(nums)
+    for i in range(1, n):
+        curr_ele = nums[i]
+        j = i - 1
+        while j >= 0 and nums[j] > curr_ele:
+            nums[j + 1] = nums[j]
+            j -= 1
+        nums[j + 1] = curr_ele
+
+
+print(insertionSort([5, 4, 3, 1, 2, 7]))
+
+
 class InsertionSortTestCase(unittest.TestCase):
     def test_sort_empty_list(self):
         arr = []
@@ -36,7 +50,3 @@ class InsertionSortTestCase(unittest.TestCase):
         arr = [3, 5, 1, 2, 4, 3]
         insertion_sort(arr)
         self.assertEqual(arr, [1, 2, 3, 3, 4, 5])
-
-
-if __name__ == "__main__":
-    unittest.main()

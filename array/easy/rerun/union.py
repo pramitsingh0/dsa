@@ -6,7 +6,6 @@ def find_union(arr1, arr2):
     j = 0
     aux_arr = []
     while i < len(arr1) and j < len(arr2):
-        print(i, j)
         if arr1[i] < arr2[j]:
             if len(aux_arr) == 0 or aux_arr[-1] != arr1[i]:
                 aux_arr.append(arr1[i])

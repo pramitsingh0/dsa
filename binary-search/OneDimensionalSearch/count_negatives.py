@@ -8,3 +8,6 @@ def countNegatives(grid):
         if grid[row][col] < 0:
             negative_count += n - col
             row -= 1
+        else:
+            col += 1
+    return negative_count
